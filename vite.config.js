@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/pomodoro-interval/',
+  base: '/pomodoro-intervals/',
 });
