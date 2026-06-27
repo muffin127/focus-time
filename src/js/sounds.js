@@ -1,7 +1,7 @@
 const sounds = {
-  workEnd: new Audio('/pomodoro-intervals/sounds/work-end.mp3'),
-  breakEnd: new Audio('/pomodoro-intervals/sounds/break-end.mp3'),
-  dayComplete: new Audio('/pomodoro-intervals/sounds/day-complete.mp3'),
+  workEnd: new Audio('/focus-time/sounds/work-end.mp3'),
+  breakEnd: new Audio('/focus-time/sounds/break-end.mp3'),
+  dayComplete: new Audio('/focus-time/sounds/day-complete.mp3'),
 };
 
 export function playWorkEnd() {
