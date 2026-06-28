@@ -71,6 +71,12 @@ function onComplete() {
       session.mode = 'break';
       session.timeLeft = settings.breakTime * 60;
     }
+    if (
+      session.mode === 'break' &&
+      day.completed === Math.floor(day.goal / 2)
+    ) {
+      showModal();
+    }
   } else {
     playBreakEnd();
     session.mode = 'work';
@@ -103,9 +109,13 @@ initSetup(() => {
 
 initModal(
   () => {
-    console.log('yes');
+    state.session.mode = 'longBreak';
+    state.session.timeLeft = state.settings.longBreakTime * 60;
+    render(state);
+    saveState(state);
+    start();
   },
   () => {
-    console.log('no');
+    start();
   },
 );
